@@ -27,3 +27,44 @@
     font-size: 48px;
     text-decoration: underline;
 }
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: var(--lavender-blush);
+    height: 87vh;
+}
+
+.canvas {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px 0px 40px var(--federal-blue);
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    gap: 50px;
+}
+
+.settings-1, .settings-2 {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--federal-blue);
+    height: 3vh;
+    color: var(--lavender-blush);
+}
