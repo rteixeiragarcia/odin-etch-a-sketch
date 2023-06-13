@@ -1,0 +1,29 @@
+:root {
+    --federal-blue: #0A014F;
+    --lilac: #CD9FCC;
+    --tea-rose: #F6CACA;
+    --lavender-blush: #FAE8EB;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--federal-blue);
+}
+
+.title {
+    color: var(--tea-rose);
+    font-family: 'Poor Story', cursive;
+    font-style: italic;
+    font-size: 48px;
+    text-decoration: underline;
+}
