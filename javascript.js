@@ -3,6 +3,7 @@ const DEFAULT_SIZE = 16;
 const inputRange = document.getElementById("slider");
 const textRange = document.getElementById("size-canvas");
 const canvas = document.getElementById("canvas");
+const eraserBtn = document.getElementById("eraser-btn");
 
 function textSizeCanvas() {
     textRange.textContent = `${inputRange.value} x ${inputRange.value}`;
@@ -15,5 +16,11 @@ function createCanvas(size) {
         const square = document.createElement("div");
         canvas.appendChild(square);
         square.style.cssText = `width: ${widthSquare}px; height: ${widthSquare}px; border: 1px solid black`;
+    }
+}
+
+function eraseCanvas() {
+    while (canvas.firstChild) {
+        canvas.removeChild(canvas.lastChild);
     }
 }
