@@ -1,4 +1,10 @@
 const DEFAULT_SIZE = 16;
+const DEFAULT_MODE = "color";
+const DEFAULT_COLOR = "#000000";
+
+let mode = DEFAULT_MODE;
+let color = DEFAULT_COLOR;
+let size = DEFAULT_SIZE;
 
 const inputRange = document.getElementById("slider");
 const textRange = document.getElementById("size-canvas");
