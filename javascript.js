@@ -32,3 +32,7 @@ function changeClearCanvas(size) {
 
     createCanvas(size);
 }
+
+function setCurrentMode(newMode) {
+    mode = newMode;
+}
