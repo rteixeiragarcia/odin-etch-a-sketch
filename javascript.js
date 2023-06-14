@@ -19,7 +19,7 @@ function createCanvas(size) {
     }
 }
 
-function eraseCanvas() {
+function clearCanvas() {
     while (canvas.firstChild) {
         canvas.removeChild(canvas.lastChild);
     }
