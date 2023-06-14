@@ -25,7 +25,7 @@ function createCanvas(size) {
     }
 }
 
-function changeSizeCanvas(size) {
+function changeClearCanvas(size) {
     while (canvas.firstChild) {
         canvas.removeChild(canvas.lastChild);
     }
