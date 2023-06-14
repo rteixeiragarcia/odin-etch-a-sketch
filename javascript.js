@@ -10,6 +10,11 @@ const inputRange = document.getElementById("slider");
 const textRange = document.getElementById("size-canvas");
 const canvas = document.getElementById("canvas");
 const eraserBtn = document.getElementById("eraser-btn");
+const clearBtn = document.getElementById("clear-btn");
+const colorBtn = document.getElementById("color-btn");
+const inputColor = document.getElementById("color-selector");
+const rgbBtn = document.getElementById("rgb-btn");
+const greyBtn = document.getElementById("grey-btn");
 
 function textSizeCanvas() {
     textRange.textContent = `${inputRange.value} x ${inputRange.value}`;
