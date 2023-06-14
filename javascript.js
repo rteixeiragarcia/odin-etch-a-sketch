@@ -4,11 +4,9 @@ const inputRange = document.getElementById("slider");
 const textRange = document.getElementById("size-canvas");
 const canvas = document.getElementById("canvas");
 
-function changeCanvas() {
+function textSizeCanvas() {
     textRange.textContent = `${inputRange.value} x ${inputRange.value}`;
 }
-
-inputRange.addEventListener("change", changeCanvas);
 
 function createCanvas(size) {
     let widthSquare = canvas.offsetWidth / size;
