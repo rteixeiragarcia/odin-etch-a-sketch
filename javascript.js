@@ -1,12 +1,12 @@
 const DEFAULT_SIZE = 16;
 const DEFAULT_MODE = "color";
 const DEFAULT_COLOR = "#000000";
-const DEFAULT_GREY = 0.0;
+const DEFAULT_gray = 0.0;
 
 let mode = DEFAULT_MODE;
 let color = DEFAULT_COLOR;
 let size = DEFAULT_SIZE;
-let grey = DEFAULT_GREY;
+let gray = DEFAULT_gray;
 
 const inputRange = document.getElementById("slider");
 const textRange = document.getElementById("size-canvas");
@@ -16,7 +16,7 @@ const clearBtn = document.getElementById("clear-btn");
 const colorBtn = document.getElementById("color-btn");
 const inputColor = document.getElementById("color-selector");
 const rgbBtn = document.getElementById("rgb-btn");
-const greyBtn = document.getElementById("grey-btn");
+const grayBtn = document.getElementById("gray-btn");
 
 function textSizeCanvas() {
     textRange.textContent = `${inputRange.value} x ${inputRange.value}`;
@@ -57,7 +57,7 @@ function changeColor(e) {
         e.target.style.cssText = `background-color: rgb(${randomR}, ${randomG}, ${randomB})`;
     }
 
-    if (mode === "grey") {
-        const greyDiv = e.target.style.filter;
+    if (mode === "gray") {
+        
     }
 }
