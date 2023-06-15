@@ -84,6 +84,9 @@ function changeColor(e) {
                 e.target.style.backgroundColor = `rgb(${bottom}, ${bottom}, ${bottom})`;
             }
         }
-
     }
+}
+
+function eraseColor(e) {
+    e.target.style.backgroundColor = `rgb(${white}, ${white}, ${white})`;
 }
