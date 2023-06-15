@@ -42,3 +42,11 @@ function createCanvas(size) {
 function setCurrentMode(newMode) {
     mode = newMode;
 }
+
+function clearCanvas() {
+    while (canvas.firstChild) {
+        canvas.removeChild(canvas.lastChild);
+    }
+
+    createCanvas(slider.value);
+}
