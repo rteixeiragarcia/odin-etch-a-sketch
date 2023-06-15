@@ -12,3 +12,7 @@ let colorBtn = document.getElementById("color-btn");
 let colorSelector = document.getElementById("color-selector");
 let rgbBtn = document.getElementById("rgb-btn");
 let grayBtn = document.getElementById("gray-btn");
+
+function setValueInput() {
+    this.setAttribute('value',this.value);
+}
