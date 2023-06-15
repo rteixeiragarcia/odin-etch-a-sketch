@@ -37,6 +37,8 @@ function createCanvas(size) {
         const square = document.createElement("div");
         canvas.appendChild(square);
         square.style.cssText = `width: ${widthSquare}px; height: ${widthSquare}px; background-color: rgb(${white}, ${white}, ${white})`;
+
+        square.addEventListener("mousedown", changeColor(e));
     }
 }
 
