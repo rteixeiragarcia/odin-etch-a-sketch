@@ -38,3 +38,7 @@ function createCanvas(size) {
         square.style.backgroundColor = "rgb(255, 255, 255)";
     }
 }
+
+function setCurrentMode(newMode) {
+    mode = newMode;
+}
