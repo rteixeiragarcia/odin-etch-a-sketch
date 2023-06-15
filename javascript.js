@@ -25,3 +25,16 @@ function setValueInput() {
 function setTextSizeCanvas(size){
     sizeCanvas.textContent = `${size} x ${size}`;
 }
+
+function createCanvas(size) {
+    let widthSquare = canvas.offsetWidth / size;
+
+    for (let i = 0; i < size * size; i++) {
+        const square = document.createElement("div");
+        canvas.appendChild(square);
+
+        square.style.width = widthSquare;
+        square.style.height = widthSquare;
+        square.style.backgroundColor = "rgb(255, 255, 255)";
+    }
+}
