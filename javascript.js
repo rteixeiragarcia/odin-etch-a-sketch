@@ -26,8 +26,8 @@ const inputColor = document.getElementById("color-selector");
 const rgbBtn = document.getElementById("rgb-btn");
 const grayBtn = document.getElementById("gray-btn");
 
-function textSizeCanvas() {
-    textRange.textContent = `${inputRange.value} x ${inputRange.value}`;
+function textSizeCanvas(size) {
+    textRange.textContent = `${size} x ${size}`;
 }
 
 function createCanvas(size) {
@@ -43,14 +43,16 @@ function createCanvas(size) {
     }
 }
 
-function changeClearCanvas(size) {
+function changeClearCanvas() {
     while (canvas.firstChild) {
         canvas.removeChild(canvas.lastChild);
     }
 
-    createCanvas(size);
+    this.setAttribute("value", this.value);
 
-    textSizeCanvas();
+    createCanvas(this.value);
+
+    textSizeCanvas(this.value);
 }
 
 function setCurrentMode(newMode) {
@@ -99,3 +101,5 @@ function changeColor(e) {
 function eraseColor(e) {
     e.target.style.backgroundColor = `rgb(${white}, ${white}, ${white})`;
 }
+
+inputRange.addEventListener("change", changeClearCanvas);
