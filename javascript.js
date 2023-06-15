@@ -38,7 +38,8 @@ function createCanvas(size) {
         canvas.appendChild(square);
         square.style.cssText = `width: ${widthSquare}px; height: ${widthSquare}px; background-color: rgb(${white}, ${white}, ${white})`;
 
-        square.addEventListener("mousedown", changeColor(e));
+        square.addEventListener("mousedown", changeColor);
+        square.addEventListener("mouseover", changeColor);
     }
 }
 
@@ -48,6 +49,8 @@ function changeClearCanvas(size) {
     }
 
     createCanvas(size);
+
+    textSizeCanvas();
 }
 
 function setCurrentMode(newMode) {
@@ -59,7 +62,7 @@ function changeColor(e) {
         e.target.style.cssText = "background-color = inputColor.value";
     }
 
-    if (mode === rgb) {
+    if (mode === "rgb") {
         const randomR = Math.floor(Math.random * 256);
         const randomG = Math.floor(Math.random * 256);
         const randomB = Math.floor(Math.random * 256);
@@ -86,6 +89,10 @@ function changeColor(e) {
                 e.target.style.backgroundColor = `rgb(${bottom}, ${bottom}, ${bottom})`;
             }
         }
+    }
+
+    if (mode === "eraser") {
+        e.target.style.backgroundColor = `rgb(${white}, ${white}, ${white})`;
     }
 }
 
