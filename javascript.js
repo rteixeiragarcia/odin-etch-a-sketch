@@ -22,3 +22,6 @@ function setValueInput() {
     this.setAttribute('value',this.value);
 }
 
+function setTextSizeCanvas(size){
+    sizeCanvas.textContent = `${size} x ${size}`;
+}
