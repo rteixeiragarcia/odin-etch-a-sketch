@@ -41,3 +41,17 @@ function changeClearCanvas(size) {
 function setCurrentMode(newMode) {
     mode = newMode;
 }
+
+function changeColor(e) {
+    if (mode === "color") {
+        e.target.style.cssText = "background-color = inputColor.value";
+    }
+
+    if (mode === rgb) {
+        const randomR = Math.floor(Math.random * 256);
+        const randomG = Math.floor(Math.random * 256);
+        const randomB = Math.floor(Math.random * 256);
+
+        e.target.style.cssText = `background-color: rgb(${randomR}, ${randomG}, ${randomB})`;
+    }
+}
