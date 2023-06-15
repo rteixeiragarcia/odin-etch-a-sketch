@@ -44,9 +44,11 @@ function setCurrentMode(newMode) {
 }
 
 function clearCanvas() {
-    while (canvas.firstChild) {
-        canvas.removeChild(canvas.lastChild);
-    }
+    let nodes = document.getElementById("canvas").childNodes;
 
-    createCanvas(slider.value);
+    for (let i = 0; i < nodes.length; i++) {
+        if (nodes[i].nodeName === "div") {
+            nodes[i].style.backgroundColor = "rgb(255, 255, 255)";
+        }
+    }
 }
