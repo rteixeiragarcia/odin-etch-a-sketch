@@ -30,7 +30,7 @@ function createCanvas(size) {
     for (let i = 0; i < size * size; i++) {
         const square = document.createElement("div");
         canvas.appendChild(square);
-        square.style.cssText = `width: ${widthSquare}px; height: ${widthSquare}px; border: 1px solid black`;
+        square.style.cssText = `width: ${widthSquare}px; height: ${widthSquare}px; background-color: rgb(255, 255, 255)`;
     }
 }
 
