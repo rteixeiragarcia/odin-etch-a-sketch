@@ -1,12 +1,14 @@
 const DEFAULT_SIZE = 16;
 const DEFAULT_MODE = "color";
 const DEFAULT_COLOR = "#000000";
-const DEFAULT_gray = 0.0;
+const DEFAULT_GRAY = 25.5;
+const DEFAULT_WHITE = 255;
 
 let mode = DEFAULT_MODE;
 let color = DEFAULT_COLOR;
 let size = DEFAULT_SIZE;
-let gray = DEFAULT_gray;
+let graySlice = DEFAULT_GRAY;
+let white = DEFAULT_WHITE;
 
 const inputRange = document.getElementById("slider");
 const textRange = document.getElementById("size-canvas");
@@ -58,6 +60,24 @@ function changeColor(e) {
     }
 
     if (mode === "gray") {
-        
+        let rgb = e.target.style.backgroundColor;
+
+        rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+
+        let r = Number(rgb[0]);
+        let g = Number(rgb[1]);
+        let b = Number(rgb[2]);
+
+        let gray = Math.floor(r * 0.299 + g * 0.587 + b * 0.114);
+
+        for(let i = 1; i <= 10; i++) {
+            let bottom = Math.floor(white - i * graySlice);
+            let upper = Math.floor(white - (i - 1) * graySlice);
+
+            if (gray >= bottom && gray <= upper) {
+                e.target.style.backgroundColor = `rgb(${bottom}, ${bottom}, ${bottom})`;
+            }
+        }
+
     }
 }
