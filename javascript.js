@@ -1,10 +1,12 @@
 const DEFAULT_SIZE = 16;
 const DEFAULT_MODE = "color";
 const DEFAULT_COLOR = "#000000";
+const DEFAULT_GREY = 0.0;
 
 let mode = DEFAULT_MODE;
 let color = DEFAULT_COLOR;
 let size = DEFAULT_SIZE;
+let grey = DEFAULT_GREY;
 
 const inputRange = document.getElementById("slider");
 const textRange = document.getElementById("size-canvas");
@@ -53,5 +55,9 @@ function changeColor(e) {
         const randomB = Math.floor(Math.random * 256);
 
         e.target.style.cssText = `background-color: rgb(${randomR}, ${randomG}, ${randomB})`;
+    }
+
+    if (mode === "grey") {
+        const greyDiv = e.target.style.filter;
     }
 }
